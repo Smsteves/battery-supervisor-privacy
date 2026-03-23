@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battery Supervisor — Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #FAFAF8;
+    color: #2C2C2A;
+    line-height: 1.75;
+    padding: 2rem 1.25rem;
+  }
+  .container { max-width: 680px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #E8E6E0;
+  }
+  .icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #2D9F75, #1D7A5A);
+    border-radius: 14px;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .icon svg { width: 28px; height: 28px; }
+  h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .subtitle { color: #888780; font-size: 0.9rem; }
+  h2 {
+    font-size: 1.1rem; font-weight: 700;
+    margin: 2rem 0 0.75rem; color: #1D9E75;
+    letter-spacing: -0.01em;
+  }
+  p, li { font-size: 0.95rem; color: #444441; margin-bottom: 0.75rem; }
+  ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+  li { margin-bottom: 0.4rem; }
+  .highlight {
+    background: #E1F5EE; border-left: 3px solid #1D9E75;
+    padding: 0.75rem 1rem; border-radius: 0 8px 8px 0;
+    margin: 1.25rem 0; font-size: 0.9rem;
+  }
+  .footer {
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid #E8E6E0;
+    text-align: center; font-size: 0.8rem; color: #888780;
+  }
+  a { color: #1D9E75; }
+  .lang-switch {
+    display: inline-flex; gap: 4px;
+    background: #EDECE8; border-radius: 8px; padding: 3px;
+    margin-top: 0.75rem;
+  }
+  .lang-switch button {
+    border: none; background: transparent; padding: 6px 16px;
+    border-radius: 6px; cursor: pointer; font-family: inherit;
+    font-size: 0.85rem; font-weight: 500; color: #888780;
+    transition: all 0.2s;
+  }
+  .lang-switch button.active {
+    background: #fff; color: #2C2C2A;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .lang { display: none; }
+  .lang.active { display: block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="6" y="2" width="12" height="20" rx="2"/>
+        <line x1="12" y1="6" x2="12" y2="10"/>
+        <line x1="10" y1="8" x2="14" y2="8"/>
+      </svg>
+    </div>
+    <h1>Battery Supervisor</h1>
+    <p class="subtitle">Privacy Policy</p>
+    <div class="lang-switch">
+      <button class="active" onclick="switchLang('it')">Italiano</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </div>
+
+  <!-- ITALIANO -->
+  <div id="lang-it" class="lang active">
+    <p><strong>Ultimo aggiornamento:</strong> 23 marzo 2026</p>
+    <p><strong>Sviluppatore:</strong> Stefano Prevedini</p>
+
+    <div class="highlight">
+      <strong>In breve:</strong> Battery Supervisor non raccoglie, non trasmette e non condivide alcun dato personale. Tutti i dati restano esclusivamente sul tuo dispositivo.
+    </div>
+
+    <h2>1. Dati raccolti</h2>
+    <p>L'app raccoglie esclusivamente dati tecnici relativi alla batteria del dispositivo, tra cui:</p>
+    <ul>
+      <li>Livello di carica (%)</li>
+      <li>Tensione (V) e temperatura (°C)</li>
+      <li>Stato di carica/scarica</li>
+      <li>Stato on/off di Wi-Fi, dati mobili, Bluetooth, GPS e display</li>
+    </ul>
+    <p>Questi dati vengono utilizzati esclusivamente per visualizzare statistiche e grafici all'interno dell'app.</p>
+
+    <h2>2. Archiviazione dei dati</h2>
+    <p>Tutti i dati vengono salvati localmente nello storage interno dell'app (file <code>history.json</code>). Nessun dato viene inviato a server esterni, servizi cloud o terze parti.</p>
+    <p>Il sistema Google Auto Backup può includere questi dati nel backup automatico del dispositivo per consentire il ripristino dopo una reinstallazione. Questo backup è gestito interamente da Google secondo la <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</p>
+
+    <h2>3. Permessi utilizzati</h2>
+    <ul>
+      <li><strong>Notifiche</strong> — per mostrare lo stato della batteria nella barra delle notifiche</li>
+      <li><strong>Avvio al boot</strong> — per riavviare automaticamente il monitoraggio dopo il riavvio del dispositivo</li>
+      <li><strong>Stato rete / Wi-Fi / Bluetooth</strong> — per rilevare se questi servizi sono attivi (solo stato on/off, nessun dato di rete viene raccolto)</li>
+      <li><strong>Posizione approssimativa</strong> — utilizzata esclusivamente per rilevare lo stato on/off del GPS come indicatore di consumo energetico. L'app non accede mai alla posizione reale dell'utente</li>
+      <li><strong>Ottimizzazione batteria</strong> — per garantire il funzionamento continuo del servizio in background</li>
+    </ul>
+
+    <h2>4. Condivisione dei dati</h2>
+    <p>Battery Supervisor non condivide alcun dato con terze parti. Non sono presenti SDK di analisi, pubblicità, tracciamento o servizi di terze parti di alcun tipo.</p>
+
+    <h2>5. Sicurezza</h2>
+    <p>Poiché tutti i dati risiedono esclusivamente nello storage interno protetto dell'app, sono accessibili solo all'app stessa e non possono essere letti da altre applicazioni.</p>
+
+    <h2>6. Minori</h2>
+    <p>L'app non è rivolta a minori di 13 anni e non raccoglie consapevolmente dati personali di minori.</p>
+
+    <h2>7. Modifiche alla policy</h2>
+    <p>Eventuali modifiche a questa privacy policy saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'app dopo la pubblicazione delle modifiche implica l'accettazione delle stesse.</p>
+
+    <h2>8. Contatti</h2>
+    <p>Per domande o richieste relative alla privacy, contattare:</p>
+    <p><strong>Stefano Prevedini</strong><br>
+    Email: <a href="mailto:Stefano.prevedini@gmail.com">Stefano.prevedini@gmail.com</a></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="lang-en" class="lang">
+    <p><strong>Last updated:</strong> March 23, 2026</p>
+    <p><strong>Developer:</strong> Stefano Prevedini</p>
+
+    <div class="highlight">
+      <strong>In short:</strong> Battery Supervisor does not collect, transmit, or share any personal data. All data remains exclusively on your device.
+    </div>
+
+    <h2>1. Data collected</h2>
+    <p>The app collects only technical data related to the device battery, including:</p>
+    <ul>
+      <li>Charge level (%)</li>
+      <li>Voltage (V) and temperature (°C)</li>
+      <li>Charging/discharging status</li>
+      <li>On/off status of Wi-Fi, mobile data, Bluetooth, GPS, and display</li>
+    </ul>
+    <p>This data is used exclusively to display statistics and charts within the app.</p>
+
+    <h2>2. Data storage</h2>
+    <p>All data is stored locally in the app's internal storage (<code>history.json</code> file). No data is sent to external servers, cloud services, or third parties.</p>
+    <p>Google Auto Backup may include this data in the device's automatic backup to allow restoration after reinstallation. This backup is managed entirely by Google according to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+    <h2>3. Permissions used</h2>
+    <ul>
+      <li><strong>Notifications</strong> — to display battery status in the notification bar</li>
+      <li><strong>Boot start</strong> — to automatically restart monitoring after device reboot</li>
+      <li><strong>Network / Wi-Fi / Bluetooth status</strong> — to detect whether these services are active (on/off status only, no network data is collected)</li>
+      <li><strong>Approximate location</strong> — used exclusively to detect GPS on/off status as an energy consumption indicator. The app never accesses the user's actual location</li>
+      <li><strong>Battery optimization</strong> — to ensure continuous background service operation</li>
+    </ul>
+
+    <h2>4. Data sharing</h2>
+    <p>Battery Supervisor does not share any data with third parties. There are no analytics SDKs, advertising, tracking, or third-party services of any kind.</p>
+
+    <h2>5. Security</h2>
+    <p>Since all data resides exclusively in the app's protected internal storage, it is accessible only to the app itself and cannot be read by other applications.</p>
+
+    <h2>6. Children</h2>
+    <p>The app is not intended for children under 13 and does not knowingly collect personal data from children.</p>
+
+    <h2>7. Policy changes</h2>
+    <p>Any changes to this privacy policy will be published on this page with the update date. Continued use of the app after publication of changes implies acceptance of those changes.</p>
+
+    <h2>8. Contact</h2>
+    <p>For privacy-related questions or requests, contact:</p>
+    <p><strong>Stefano Prevedini</strong><br>
+    Email: <a href="mailto:mailto:Stefano.prevedini@gmail.com">mailto:Stefano.prevedini@gmail.com</a></p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Stefano Prevedini — Battery Supervisor</p>
+  </div>
+</div>
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
