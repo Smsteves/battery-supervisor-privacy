@@ -82,56 +82,72 @@
     <h1>Battery Supervisor</h1>
     <p class="subtitle">Privacy Policy</p>
     <div class="lang-switch">
-      <button class="active" onclick="switchLang('it')">Italiano</button>
-      <button onclick="switchLang('en')">English</button>
+      <button class="active" onclick="switchLang('it', this)">Italiano</button>
+      <button onclick="switchLang('en', this)">English</button>
     </div>
   </div>
 
   <!-- ITALIANO -->
   <div id="lang-it" class="lang active">
-    <p><strong>Ultimo aggiornamento:</strong> 23 marzo 2026</p>
+    <p><strong>Ultimo aggiornamento:</strong> Maggio 2026</p>
     <p><strong>Sviluppatore:</strong> Stefano Prevedini</p>
 
     <div class="highlight">
-      <strong>In breve:</strong> Battery Supervisor non raccoglie, non trasmette e non condivide alcun dato personale. Tutti i dati restano esclusivamente sul tuo dispositivo.
+      <strong>In breve:</strong> Battery Supervisor elabora localmente dati tecnici della batteria e, solo se l'utente abilita la funzione, dati sulle app in primo piano. I dati restano sul dispositivo: non vengono venduti, condivisi o inviati a server esterni.
     </div>
 
-    <h2>1. Dati raccolti</h2>
-    <p>L'app raccoglie esclusivamente dati tecnici relativi alla batteria del dispositivo, tra cui:</p>
+    <h2>1. Introduzione</h2>
+    <p>Battery Supervisor ("l'app", "noi") rispetta la tua privacy. Questa Privacy Policy spiega come vengono trattate le informazioni quando utilizzi l'app per monitorare la batteria, analizzare i consumi e generare report diagnostici locali.</p>
+
+    <h2>2. Dati trattati dall'app</h2>
+    <p>L'app tratta localmente dati tecnici relativi alla batteria e al funzionamento energetico del dispositivo, tra cui:</p>
     <ul>
-      <li>Livello di carica (%)</li>
-      <li>Tensione (V) e temperatura (°C)</li>
-      <li>Stato di carica/scarica</li>
-      <li>Stato on/off di Wi-Fi, dati mobili, Bluetooth, GPS e display</li>
+      <li>livello di carica della batteria (%)</li>
+      <li>temperatura, tensione, corrente o stime di consumo quando disponibili</li>
+      <li>stato di carica/scarica e velocità di ricarica</li>
+      <li>stato on/off di display, Wi‑Fi, dati mobili, Bluetooth e GPS</li>
+      <li>storico locale dei campioni batteria e report diagnostici generati dall'app</li>
+      <li>stime locali di autonomia, standby, consumo medio e consumo durante l'uso delle app</li>
     </ul>
-    <p>Questi dati vengono utilizzati esclusivamente per visualizzare statistiche e grafici all'interno dell'app.</p>
+    <p>Questi dati vengono usati esclusivamente per mostrare grafici, statistiche, notifiche e diagnosi batteria all'interno dell'app.</p>
 
-    <h2>2. Archiviazione dei dati</h2>
-    <p>Tutti i dati vengono salvati localmente nello storage interno dell'app (file <code>history.json</code>). Nessun dato viene inviato a server esterni, servizi cloud o terze parti.</p>
-    <p>Il sistema Google Auto Backup può includere questi dati nel backup automatico del dispositivo per consentire il ripristino dopo una reinstallazione. Questo backup è gestito interamente da Google secondo la <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</p>
+    <h2>3. Accesso ai dati di utilizzo delle app</h2>
+    <p>La funzione di analisi delle app è opzionale. Se l'utente la abilita volontariamente nelle impostazioni Android tramite <strong>Accesso dati di utilizzo</strong>, Battery Supervisor può leggere quali app sono state in primo piano e per quanto tempo.</p>
+    <p>Queste informazioni vengono usate solo localmente per stimare il consumo del telefono mentre una determinata app era in primo piano e per migliorare il report diagnostico della batteria.</p>
+    <p>Battery Supervisor non legge il contenuto delle app: non accede a messaggi, password, testi digitati, schermate, file personali o contenuti visualizzati dentro altre applicazioni.</p>
 
-    <h2>3. Permessi utilizzati</h2>
+    <h2>4. Archiviazione dei dati</h2>
+    <p>Tutti i dati vengono salvati localmente nello storage interno protetto dell'app. Nessun dato viene inviato a server esterni, servizi cloud o terze parti.</p>
+    <p>Il sistema Google Auto Backup può includere alcuni dati dell'app nel backup automatico del dispositivo per consentire il ripristino dopo una reinstallazione. Questo backup è gestito interamente da Google secondo la <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</p>
+
+    <h2>5. Permessi utilizzati</h2>
     <ul>
-      <li><strong>Notifiche</strong> — per mostrare lo stato della batteria nella barra delle notifiche</li>
+      <li><strong>Notifiche</strong> — per mostrare lo stato della batteria e mantenere visibile il monitoraggio attivo</li>
+      <li><strong>Servizio in primo piano</strong> — per permettere il monitoraggio continuo della batteria tramite notifica persistente</li>
       <li><strong>Avvio al boot</strong> — per riavviare automaticamente il monitoraggio dopo il riavvio del dispositivo</li>
-      <li><strong>Stato rete / Wi-Fi / Bluetooth</strong> — per rilevare se questi servizi sono attivi (solo stato on/off, nessun dato di rete viene raccolto)</li>
-      <li><strong>Posizione approssimativa</strong> — utilizzata esclusivamente per rilevare lo stato on/off del GPS come indicatore di consumo energetico. L'app non accede mai alla posizione reale dell'utente</li>
-      <li><strong>Ottimizzazione batteria</strong> — per garantire il funzionamento continuo del servizio in background</li>
+      <li><strong>Stato rete / Wi‑Fi / Bluetooth</strong> — per rilevare se questi servizi sono attivi; viene usato solo lo stato tecnico on/off, non il contenuto delle comunicazioni</li>
+      <li><strong>Posizione approssimativa</strong> — usata esclusivamente per rilevare lo stato on/off del GPS come indicatore di possibile consumo energetico. L'app non registra né traccia la posizione reale dell'utente</li>
+      <li><strong>Accesso dati di utilizzo</strong> — opzionale, usato solo per identificare le app in primo piano e il relativo tempo di utilizzo</li>
+      <li><strong>Ottimizzazione batteria</strong> — per aiutare il servizio di monitoraggio a funzionare in modo più affidabile in background</li>
+      <li><strong>Internet</strong> — se presente, può essere usato solo per aprire link esterni scelti dall'utente, ad esempio pagine informative o donazioni. I dati diagnostici della batteria non vengono inviati via internet.</li>
     </ul>
 
-    <h2>4. Condivisione dei dati</h2>
-    <p>Battery Supervisor non condivide alcun dato con terze parti. Non sono presenti SDK di analisi, pubblicità, tracciamento o servizi di terze parti di alcun tipo.</p>
+    <h2>6. Condivisione dei dati</h2>
+    <p>Battery Supervisor non vende, non condivide e non trasferisce dati personali o diagnostici a terze parti. Non sono presenti SDK pubblicitari, sistemi di tracciamento o analytics di terze parti.</p>
 
-    <h2>5. Sicurezza</h2>
-    <p>Poiché tutti i dati risiedono esclusivamente nello storage interno protetto dell'app, sono accessibili solo all'app stessa e non possono essere letti da altre applicazioni.</p>
+    <h2>7. Servizi e link esterni</h2>
+    <p>L'app può contenere link esterni aperti solo su richiesta dell'utente, ad esempio pagine web, informazioni sul progetto o eventuali donazioni. Quando visiti siti esterni, si applicano le rispettive privacy policy di quei servizi.</p>
 
-    <h2>6. Minori</h2>
+    <h2>8. Sicurezza</h2>
+    <p>Poiché i dati risiedono nello storage interno protetto dell'app, sono gestiti dalle funzionalità di sicurezza native di Android. L'app non può garantire la sicurezza di eventuali backup o strumenti esterni gestiti dal sistema operativo o dall'utente.</p>
+
+    <h2>9. Minori</h2>
     <p>L'app non è rivolta a minori di 13 anni e non raccoglie consapevolmente dati personali di minori.</p>
 
-    <h2>7. Modifiche alla policy</h2>
+    <h2>10. Modifiche alla policy</h2>
     <p>Eventuali modifiche a questa privacy policy saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'app dopo la pubblicazione delle modifiche implica l'accettazione delle stesse.</p>
 
-    <h2>8. Contatti</h2>
+    <h2>11. Contatti</h2>
     <p>Per domande o richieste relative alla privacy, contattare:</p>
     <p><strong>Stefano Prevedini</strong><br>
     Email: <a href="mailto:Stefano.prevedini@gmail.com">Stefano.prevedini@gmail.com</a></p>
@@ -139,52 +155,68 @@
 
   <!-- ENGLISH -->
   <div id="lang-en" class="lang">
-    <p><strong>Last updated:</strong> March 23, 2026</p>
+    <p><strong>Last updated:</strong> May 2026</p>
     <p><strong>Developer:</strong> Stefano Prevedini</p>
 
     <div class="highlight">
-      <strong>In short:</strong> Battery Supervisor does not collect, transmit, or share any personal data. All data remains exclusively on your device.
+      <strong>In short:</strong> Battery Supervisor locally processes battery technical data and, only if enabled by the user, foreground app usage data. Data remains on the device: it is not sold, shared, or sent to external servers.
     </div>
 
-    <h2>1. Data collected</h2>
-    <p>The app collects only technical data related to the device battery, including:</p>
+    <h2>1. Introduction</h2>
+    <p>Battery Supervisor ("the app", "we") respects your privacy. This Privacy Policy explains how information is handled when you use the app to monitor your battery, analyze power usage, and generate local diagnostic reports.</p>
+
+    <h2>2. Data processed by the app</h2>
+    <p>The app locally processes technical data related to the device battery and power behavior, including:</p>
     <ul>
-      <li>Charge level (%)</li>
-      <li>Voltage (V) and temperature (°C)</li>
-      <li>Charging/discharging status</li>
-      <li>On/off status of Wi-Fi, mobile data, Bluetooth, GPS, and display</li>
+      <li>battery charge level (%)</li>
+      <li>temperature, voltage, current, or power usage estimates when available</li>
+      <li>charging/discharging status and charging speed</li>
+      <li>on/off status of display, Wi‑Fi, mobile data, Bluetooth, and GPS</li>
+      <li>local battery sample history and diagnostic reports generated by the app</li>
+      <li>local estimates of remaining time, standby drain, average usage, and power usage while apps are in the foreground</li>
     </ul>
-    <p>This data is used exclusively to display statistics and charts within the app.</p>
+    <p>This data is used exclusively to display charts, statistics, notifications, and battery diagnostics within the app.</p>
 
-    <h2>2. Data storage</h2>
-    <p>All data is stored locally in the app's internal storage (<code>history.json</code> file). No data is sent to external servers, cloud services, or third parties.</p>
-    <p>Google Auto Backup may include this data in the device's automatic backup to allow restoration after reinstallation. This backup is managed entirely by Google according to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+    <h2>3. Usage Access and foreground apps</h2>
+    <p>The app usage analysis feature is optional. If the user voluntarily enables it in Android settings through <strong>Usage Access</strong>, Battery Supervisor can read which apps were in the foreground and for how long.</p>
+    <p>This information is used only locally to estimate the phone's power usage while a specific app was in the foreground and to improve the battery diagnostic report.</p>
+    <p>Battery Supervisor does not read app content: it does not access messages, passwords, typed text, screenshots, personal files, or content displayed inside other applications.</p>
 
-    <h2>3. Permissions used</h2>
+    <h2>4. Data storage</h2>
+    <p>All data is stored locally in the app's protected internal storage. No data is sent to external servers, cloud services, or third parties.</p>
+    <p>Google Auto Backup may include some app data in the device's automatic backup to allow restoration after reinstallation. This backup is managed entirely by Google according to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+    <h2>5. Permissions used</h2>
     <ul>
-      <li><strong>Notifications</strong> — to display battery status in the notification bar</li>
+      <li><strong>Notifications</strong> — to display battery status and keep active monitoring visible</li>
+      <li><strong>Foreground service</strong> — to allow continuous battery monitoring through a persistent notification</li>
       <li><strong>Boot start</strong> — to automatically restart monitoring after device reboot</li>
-      <li><strong>Network / Wi-Fi / Bluetooth status</strong> — to detect whether these services are active (on/off status only, no network data is collected)</li>
-      <li><strong>Approximate location</strong> — used exclusively to detect GPS on/off status as an energy consumption indicator. The app never accesses the user's actual location</li>
-      <li><strong>Battery optimization</strong> — to ensure continuous background service operation</li>
+      <li><strong>Network / Wi‑Fi / Bluetooth status</strong> — to detect whether these services are active; only technical on/off status is used, not communication content</li>
+      <li><strong>Approximate location</strong> — used exclusively to detect GPS on/off status as a possible energy usage indicator. The app does not record or track the user's actual location</li>
+      <li><strong>Usage Access</strong> — optional, used only to identify foreground apps and their usage time</li>
+      <li><strong>Battery optimization</strong> — to help the monitoring service run more reliably in the background</li>
+      <li><strong>Internet</strong> — if present, it may be used only to open external links chosen by the user, such as information pages or donations. Battery diagnostic data is not sent over the internet.</li>
     </ul>
 
-    <h2>4. Data sharing</h2>
-    <p>Battery Supervisor does not share any data with third parties. There are no analytics SDKs, advertising, tracking, or third-party services of any kind.</p>
+    <h2>6. Data sharing</h2>
+    <p>Battery Supervisor does not sell, share, or transfer personal or diagnostic data to third parties. There are no advertising SDKs, tracking systems, or third-party analytics.</p>
 
-    <h2>5. Security</h2>
-    <p>Since all data resides exclusively in the app's protected internal storage, it is accessible only to the app itself and cannot be read by other applications.</p>
+    <h2>7. External services and links</h2>
+    <p>The app may contain external links opened only at the user's request, such as web pages, project information, or optional donations. When you visit external websites, their own privacy policies apply.</p>
 
-    <h2>6. Children</h2>
+    <h2>8. Security</h2>
+    <p>Since data resides in the app's protected internal storage, it is handled by Android's native security features. The app cannot guarantee the security of backups or external tools managed by the operating system or by the user.</p>
+
+    <h2>9. Children</h2>
     <p>The app is not intended for children under 13 and does not knowingly collect personal data from children.</p>
 
-    <h2>7. Policy changes</h2>
+    <h2>10. Policy changes</h2>
     <p>Any changes to this privacy policy will be published on this page with the update date. Continued use of the app after publication of changes implies acceptance of those changes.</p>
 
-    <h2>8. Contact</h2>
+    <h2>11. Contact</h2>
     <p>For privacy-related questions or requests, contact:</p>
     <p><strong>Stefano Prevedini</strong><br>
-    Email: <a href="mailto:mailto:Stefano.prevedini@gmail.com">mailto:Stefano.prevedini@gmail.com</a></p>
+    Email: <a href="mailto:Stefano.prevedini@gmail.com">Stefano.prevedini@gmail.com</a></p>
   </div>
 
   <div class="footer">
@@ -192,11 +224,11 @@
   </div>
 </div>
 <script>
-function switchLang(lang) {
+function switchLang(lang, btn) {
   document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
   document.getElementById('lang-' + lang).classList.add('active');
-  document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  document.querySelectorAll('.lang-switch button').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
 }
 </script>
 </body>
